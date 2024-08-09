@@ -98,7 +98,7 @@ public class SocialMediaController {
                 messageService.updateMessage(messageId, messageText);
                 return ResponseEntity.ok(1);
             }
-            return ResponseEntity.ok(1);
+            return ResponseEntity.ok().build();
         } catch (IllegalArgumentException e) {
             return ResponseEntity.badRequest().build();
         }catch(Exception e){
